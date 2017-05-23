@@ -108,6 +108,6 @@ TARDIR="PredictionIO-$VERSION"
 cp -r ${DISTDIR} ${TARDIR}
 
 tar zcvf ${TARNAME} ${TARDIR}
-rm -rf ${TARDIR}
+#rm -rf ${TARDIR}
 
 echo -e "\033[0;32mPredictionIO binary distribution created at $TARNAME\033[0m"

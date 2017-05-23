@@ -117,6 +117,10 @@ val dataHbase = (project in file("storage/hbase")).
   settings(commonSettings: _*).
   enablePlugins(GenJavadocPlugin)
 
+val dataAzurefs = (project in file("storage/azurefs")).
+  settings(commonSettings: _*).
+  enablePlugins(GenJavadocPlugin)
+
 val dataHdfs = (project in file("storage/hdfs")).
   settings(commonSettings: _*).
   enablePlugins(GenJavadocPlugin)
@@ -173,7 +177,8 @@ val storageSubprojects = Seq(
     dataHbase,
     dataHdfs,
     dataJdbc,
-    dataLocalfs)
+    dataLocalfs,
+    dataAzurefs)
 
 val storage = (project in file("storage"))
   .aggregate(storageSubprojects map Project.projectToRef: _*)
